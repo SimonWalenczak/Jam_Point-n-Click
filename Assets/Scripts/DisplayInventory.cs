@@ -1,25 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DisplayInventory : MonoBehaviour
 {
-    [SerializeField] private bool isDetector;
-
-    public GameObject inventory;
-    private void Update()
+    [SerializeField] private bool _isUp = false;
+    [SerializeField] private Vector2 pos;
+    private void OnMouseOver()
     {
-
-        if (isDetector)
+        if (_isUp == false)
         {
-            inventory.transform.DOMoveY(transform.position.y + 1, 1);
+            _isUp = true;
+            transform.DOMoveY(pos.x, 1);
         }
-        else
+    }
+
+    private void OnMouseExit()
+    {
+        if (_isUp == true)
         {
-            inventory.transform.DOMoveY(transform.position.y - 1, 1);
+            _isUp = false;
+            transform.DOMoveY(pos.y, 1);
         }
     }
 }
