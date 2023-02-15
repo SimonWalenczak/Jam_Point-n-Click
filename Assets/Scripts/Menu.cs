@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private GameObject _credtisPanel;
     public void OnClickPlay()
     {
         SceneManager.LoadScene("GameCommon");
@@ -21,5 +23,15 @@ public class Menu : MonoBehaviour
         //Stop playing the scene
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    public void OnClickOpenCredits()
+    {
+        _credtisPanel.SetActive(true);
+    }
+    
+    public void OnClickCloseCredits()
+    {
+        _credtisPanel.SetActive(false);
     }
 }
