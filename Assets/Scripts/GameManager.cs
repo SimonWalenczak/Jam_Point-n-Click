@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +8,10 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public PlayerController Player { get; private set; }
     [field: SerializeField] public CanvasInventory CanvasInventory { get; private set; }
     public const string NextSceneKey = "NextScene";
+
+
+    public Texture2D cursorTexture;
+
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
         SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene1"), LoadSceneMode.Additive);
         PlayerPrefs.DeleteKey(NextSceneKey);
     }
