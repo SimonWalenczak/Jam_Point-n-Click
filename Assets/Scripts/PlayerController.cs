@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,6 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     public NavMeshAgent agent;
     //public Animator animator;
+
+    private void Start()
+    {
+        var agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
 
     void Update()
     {

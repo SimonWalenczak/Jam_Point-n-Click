@@ -184,15 +184,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.21356872, y: -0.9091019}
-      - {x: -0.30531156, y: -3.07137}
-      - {x: 3.30374, y: -3.0840805}
-      - {x: 4.132713, y: -2.5279114}
-      - {x: 4.4301653, y: -1.9735795}
-      - {x: 4.4850063, y: -1.2266519}
-      - {x: 3.4837556, y: -0.67592025}
-      - {x: 1.9249659, y: -0.41442028}
-      - {x: 0.48396432, y: -0.9427338}
+    - - {x: -9.266381, y: -2.4839392}
+      - {x: -8.862287, y: -4.434002}
+      - {x: 7.2273717, y: -4.446569}
+      - {x: 7.648923, y: -2.7279675}
+      - {x: 5.8845057, y: -2.70751}
+      - {x: 4.3241506, y: -2.3267257}
+      - {x: 4.1266932, y: -1.7387727}
+      - {x: 1.1280544, y: -1.6423813}
+      - {x: -4.096162, y: -1.7291349}
+      - {x: -6.86911, y: -2.3403342}
 --- !u!483693784 &383401694
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -289,8 +290,8 @@ Transform:
   m_GameObject: {fileID: 383401691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.54, y: 0.54, z: 0.54}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 863496062}
   m_RootOrder: 0
@@ -484,7 +485,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -547,7 +548,7 @@ GameObject:
   - component: {fileID: 871552159}
   - component: {fileID: 871552158}
   m_Layer: 0
-  m_Name: Door
+  m_Name: DoorScene2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +634,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 0.36515355, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -641,7 +642,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &871552161
@@ -652,8 +653,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871552157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.05, y: 0.53, z: 0}
-  m_LocalScale: {x: 1, y: 2.82, z: 1}
+  m_LocalPosition: {x: 8.11, y: -2.85, z: 0}
+  m_LocalScale: {x: 1, y: 1.8680807, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -685,8 +686,8 @@ Transform:
   m_GameObject: {fileID: 1850497930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.54, y: 0.54, z: 0.54}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
