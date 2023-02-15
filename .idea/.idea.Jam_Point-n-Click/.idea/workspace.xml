@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e0e0f30f4ec24dffafcbb448fafd03e7ca00/b7/bd2f41fe/NavMeshAgent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisplayInventory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -82,7 +83,7 @@
       <updated>1675949969532</updated>
       <workItem from="1675949972132" duration="1908000" />
       <workItem from="1676450033554" duration="6320000" />
-      <workItem from="1676468490437" duration="2259000" />
+      <workItem from="1676468490437" duration="4373000" />
     </task>
     <servers />
   </component>

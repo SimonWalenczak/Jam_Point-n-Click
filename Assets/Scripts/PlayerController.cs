@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     public NavMeshAgent agent;
     //public Animator animator;
+
+    public bool CanMove;
     
     
     [SerializeField]
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour
         agent.updateUpAxis = false;
         
         _regularScale = transform.localScale;
+
+        CanMove = true;
     }
 
     void Update()
@@ -31,8 +35,11 @@ public class PlayerController : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition.z = 0;
         
-        agent.SetDestination(mousePosition);
-        //animator.SetBool("isWalking", true);
+        if (CanMove)
+        {
+            agent.SetDestination(mousePosition);
+            //animator.SetBool("isWalking", true);
+        }
 
         if (agent.remainingDistance <= agent.stoppingDistance)
         {

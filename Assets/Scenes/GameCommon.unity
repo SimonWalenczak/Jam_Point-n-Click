@@ -335,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isUp: 0
   pos: {x: -2.3, y: -3.2}
+  _playerController: {fileID: 1464829335}
 --- !u!1 &650287648
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +410,26 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &1594872549
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594872545}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3edb76eeca45de9439d3bcfce3a829cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1770870251
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 1594872546}
     - target: {fileID: 845463847462365581, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: _horizonY
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 845463847462365581, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: _originalScaleAtY
