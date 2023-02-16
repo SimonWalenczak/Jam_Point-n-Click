@@ -8,6 +8,7 @@ TagManager:
   - DDOL
   - BG
   - Spawn
+  - MarkPanel
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public const string NextSceneKey = "NextScene";
     public Texture2D cursorTexture;
 
+    public GameObject itemMarkPanel;
+    public SpriteRenderer ItemSpriteRenderer;
+    private Vector3 resetPosItemMark;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -21,6 +25,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("WTF");
         }
+        
+        resetPosItemMark = ItemSpriteRenderer.gameObject.transform.position;
+    }
+
+    public void ResetPosItemMark()
+    {
+        ItemSpriteRenderer.gameObject.transform.position = resetPosItemMark;
     }
     
     private void Start()

@@ -6,6 +6,7 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     public int GameStep = 0;
     [SerializeField] private SpriteRenderer _backgroundSpriteRenderer;
+
     [field: SerializeField] public List<Sprite> BackgroundSprite { get; private set; }
     
     private void Awake()
@@ -22,11 +23,6 @@ public class DontDestroyOnLoad : MonoBehaviour
         if (dontdestroyonloadObjects.Length > 1)
         {
             Destroy(dontdestroyonloadObjects[1]);
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameStep++;
         }
     }
 }

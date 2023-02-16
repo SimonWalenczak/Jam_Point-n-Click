@@ -714,6 +714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006c456861bb6144ba590be6d3e30db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1538872533 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1538872533, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+  m_PrefabInstance: {fileID: 1600401478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1594872545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6993421885962105046, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
@@ -761,6 +766,79 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1001 &1600401478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1194201075, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034160, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_Name
+      value: MarkPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034160, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034160, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_TagString
+      value: MarkPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0431772
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455846034161, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239851455966231402, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+      propertyPath: m_SortingOrder
+      value: 23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
 --- !u!1 &1626661081
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +1020,8 @@ MonoBehaviour:
   <Player>k__BackingField: {fileID: 1464829335}
   <CanvasInventory>k__BackingField: {fileID: 1770870256}
   cursorTexture: {fileID: 2800000, guid: 79bbaef52390fbc4193aa1905fec769c, type: 3}
+  itemMarkPanel: {fileID: 2146135959}
+  ItemSpriteRenderer: {fileID: 1538872533}
 --- !u!4 &1915887407
 Transform:
   m_ObjectHideFlags: 0
@@ -957,6 +1037,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2146135959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3239851455846034160, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+  m_PrefabInstance: {fileID: 1600401478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3473056850565681386
 PrefabInstance:
   m_ObjectHideFlags: 0
