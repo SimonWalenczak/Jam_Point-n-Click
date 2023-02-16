@@ -14,9 +14,9 @@ public class Cross : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            GameManager.Instance.ResetPosItemMark();
             itemMarkPanel.SetActive(false);
             _playerController.CanMove = true;
-            GameManager.Instance.ResetPosItemMark();
         }
     }
 }

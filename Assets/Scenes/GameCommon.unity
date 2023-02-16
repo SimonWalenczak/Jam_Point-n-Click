@@ -525,6 +525,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 43414833cdf1466458c1cc691debdf9e, type: 3}
   - {fileID: 21300000, guid: 1d8c39a4fc0ed0f4ba081d990cdbe81c, type: 3}
   - {fileID: 21300000, guid: d22de53d088bdee4b8b2cb6c6fa6bbd4, type: 3}
+--- !u!1 &734135760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3239851456006885749, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
+  m_PrefabInstance: {fileID: 1600401478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134274170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,6 +1026,7 @@ MonoBehaviour:
   <CanvasInventory>k__BackingField: {fileID: 1770870256}
   cursorTexture: {fileID: 2800000, guid: 79bbaef52390fbc4193aa1905fec769c, type: 3}
   itemMarkPanel: {fileID: 2146135959}
+  itemMark: {fileID: 734135760}
   ItemSpriteRenderer: {fileID: 1538872533}
 --- !u!4 &1915887407
 Transform:

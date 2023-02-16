@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Texture2D cursorTexture;
 
     public GameObject itemMarkPanel;
+    public GameObject itemMark;
     public SpriteRenderer ItemSpriteRenderer;
     private Vector3 resetPosItemMark;
     
@@ -26,12 +27,14 @@ public class GameManager : MonoBehaviour
             Debug.LogError("WTF");
         }
         
-        resetPosItemMark = ItemSpriteRenderer.gameObject.transform.position;
+        resetPosItemMark = itemMark.transform.localEulerAngles;
+        print("MarkPosSaved");
     }
 
     public void ResetPosItemMark()
     {
-        ItemSpriteRenderer.gameObject.transform.position = resetPosItemMark;
+        itemMark.transform.localEulerAngles = resetPosItemMark;
+        print("MarkPosSet");
     }
     
     private void Start()

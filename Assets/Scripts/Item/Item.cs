@@ -84,16 +84,13 @@ public class Item : MonoBehaviour, IInteractable
                 FindObjectOfType<DontDestroyOnLoad>().GameStep++;
             }
         }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
     }
 
     public void DisplayItemMark()
     {
         _playerController.CanMove = false;
         GameManager.Instance.itemMarkPanel.SetActive(true);
+        GameManager.Instance.itemMark.SetActive(true);
         GameManager.Instance.ItemSpriteRenderer.sprite = Itemsprite;
     }
 }
