@@ -7,6 +7,7 @@ TagManager:
   - GameMusic
   - DDOL
   - BG
+  - Spawn
   layers:
   - Default
   - TransparentFX

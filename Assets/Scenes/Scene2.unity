@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextScene: Scene1
+  nbSpawn: 0
 --- !u!61 &169187396
 BoxCollider2D:
   m_ObjectHideFlags: 0

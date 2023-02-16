@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     public int GameStep = 0;
     [SerializeField] private SpriteRenderer _backgroundSpriteRenderer;
     [field: SerializeField] public List<Sprite> BackgroundSprite { get; private set; }
-
+    
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

@@ -9,7 +9,7 @@ public class BackgroundManager : MonoBehaviour
 
     private void Update()
     {
-        GameObject[] dontdestroyonloadObjects = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        GameObject[] dontdestroyonloadObjects = GameObject.FindGameObjectsWithTag("BG");
 
         if (dontdestroyonloadObjects.Length > 1)
         {

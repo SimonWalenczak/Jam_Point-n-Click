@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public const string NextSceneKey = "NextScene";
     public Texture2D cursorTexture;
-    
+
     private void Awake()
     {
         if (Instance == null)
@@ -23,7 +22,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("WTF");
         }
     }
-
+    
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
