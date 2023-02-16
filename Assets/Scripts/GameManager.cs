@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
         SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene1"), LoadSceneMode.Additive);
         PlayerPrefs.DeleteKey(NextSceneKey);
     }

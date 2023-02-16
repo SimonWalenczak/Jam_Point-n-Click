@@ -941,7 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Player>k__BackingField: {fileID: 1464829335}
   <CanvasInventory>k__BackingField: {fileID: 1770870256}
-  cursorTexture: {fileID: 2800000, guid: c72745c3bf87de74c98088f161f5d7f0, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 79bbaef52390fbc4193aa1905fec769c, type: 3}
 --- !u!4 &1915887407
 Transform:
   m_ObjectHideFlags: 0
