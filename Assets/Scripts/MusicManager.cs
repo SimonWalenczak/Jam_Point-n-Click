@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-public class AmbientMusic : MonoBehaviour
+public class MusicManager : MonoBehaviour
 {
     private void Awake()
     {

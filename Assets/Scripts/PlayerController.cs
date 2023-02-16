@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         var agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         
