@@ -4,7 +4,8 @@ public class Item : MonoBehaviour, IInteractable
 {
     [field: SerializeField] public string Name { get; private set; }
     
-    public Sprite Itemsprite;
+    public Sprite ItemspriteMark;
+    public Sprite ItemSprite;
     
     public int GameStep;
     public bool isItem;
@@ -71,7 +72,7 @@ public class Item : MonoBehaviour, IInteractable
         {
             if (isItem == true)
             {
-                GameManager.Instance.AddItem(this);
+                GameManager.Instance.AddItem(this, ItemSprite);
                 DisplayItemMark();
                 Destroy(gameObject);
             }
@@ -88,6 +89,6 @@ public class Item : MonoBehaviour, IInteractable
         _playerController.CanMove = false;
         GameManager.Instance.itemMarkPanel.SetActive(true);
         GameManager.Instance.itemMark.SetActive(true);
-        GameManager.Instance.ItemSpriteRenderer.sprite = Itemsprite;
+        GameManager.Instance.ItemSpriteRenderer.sprite = ItemspriteMark;
     }
 }

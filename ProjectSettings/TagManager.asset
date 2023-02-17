@@ -9,6 +9,7 @@ TagManager:
   - BG
   - Spawn
   - MarkPanel
+  - Inventory
   layers:
   - Default
   - TransparentFX

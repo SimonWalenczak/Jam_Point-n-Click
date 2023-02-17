@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Batterie
-  Itemsprite: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
+  ItemspriteMark: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 95fd693204f60b64ca68dafc5eabaafc, type: 3}
   GameStep: 5
   isItem: 1
   distDetect: 0.7
@@ -530,7 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: PorteScene3
-  Itemsprite: {fileID: 0}
+  ItemspriteMark: {fileID: 0}
+  ItemSprite: {fileID: 0}
   GameStep: 11
   isItem: 0
   distDetect: 2
@@ -807,8 +809,8 @@ GameObject:
   m_Component:
   - component: {fileID: 385241692}
   - component: {fileID: 385241694}
-  - component: {fileID: 385241693}
   - component: {fileID: 385241695}
+  - component: {fileID: 385241693}
   m_Layer: 0
   m_Name: pierre tombale
   m_TagString: Untagged
@@ -844,7 +846,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Tombe
-  Itemsprite: {fileID: 21300000, guid: c053203d0699a424ca3e2788a67857a9, type: 3}
+  ItemspriteMark: {fileID: 0}
+  ItemSprite: {fileID: 0}
   GameStep: 4
   isItem: 0
   distDetect: 0.8

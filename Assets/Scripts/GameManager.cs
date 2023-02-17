@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +8,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public PlayerController Player { get; private set; }
 
     public Vector3 spawns;
-    [field: SerializeField] public CanvasInventory CanvasInventory { get; private set; }
+    [field: SerializeField] public CanvasInventory CanvasInventory { get;  set; }
 
     public const string NextSceneKey = "NextScene";
     public Texture2D cursorTexture;
@@ -31,8 +28,11 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("WTF");
         }
+        
+        CanvasInventory = FindObjectOfType<CanvasInventory>();
 
         resetPosItemMark = itemMark.transform.localEulerAngles;
+        
     }
     
     public void ResetPosItemMark()
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
-        SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene3"), LoadSceneMode.Additive);
+        SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene1"), LoadSceneMode.Additive);
         PlayerPrefs.DeleteKey(NextSceneKey);
     }
     
@@ -66,8 +66,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, Sprite sprite)
     {
-        CanvasInventory.AddItem(item);
+        CanvasInventory.AddItem(item, sprite);
     }
 }
