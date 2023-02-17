@@ -63,6 +63,10 @@ public class Item : MonoBehaviour, IInteractable
                 if (_dontDestroyOnLoad.haveEye)
                     ActivationCondition = true;
                 break;
+            case 5:
+                if (_dontDestroyOnLoad.haveSkull)
+                    ActivationCondition = true;
+                break;
             case 0:
                 ActivationCondition = true;
                 break;
