@@ -35,6 +35,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/BuildStrangerShop\PointNClick.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\swalenczak\Desktop\BuildStrangerShop" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity2020\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\swalenczak\Documents\GitHub\Jam_Point-n-Click -debugCodeOptimization" />
@@ -84,6 +92,7 @@
       <workItem from="1676450033554" duration="6320000" />
       <workItem from="1676468490437" duration="4373000" />
       <workItem from="1676487630131" duration="14488000" />
+      <workItem from="1676648317741" duration="7763000" />
     </task>
     <servers />
   </component>

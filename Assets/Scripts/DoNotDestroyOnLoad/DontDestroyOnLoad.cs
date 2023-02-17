@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DontDestroyOnLoad : MonoBehaviour
@@ -12,7 +13,11 @@ public class DontDestroyOnLoad : MonoBehaviour
     public bool haveEye;
     public bool haveBattery;
     public bool haveSkull;
-    
+
+    public bool giftSkull;
+    public GameObject DialogPanel;
+    public string _dialog;
+    [SerializeField] private bool finishDialog;
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -28,6 +33,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     
     private void Update()
     {
+        
         _backgroundSpriteRenderer.sprite = BackgroundSprite[GameStep];
 
         GameObject[] dontdestroyonloadObjects = GameObject.FindGameObjectsWithTag("DDOL");
@@ -35,6 +41,29 @@ public class DontDestroyOnLoad : MonoBehaviour
         if (dontdestroyonloadObjects.Length > 1)
         {
             Destroy(dontdestroyonloadObjects[1]);
+        }
+        
+        if (GameStep == 13)
+        {
+            DialogPanel.SetActive(true);
+            if (giftSkull == true && Input.GetMouseButtonDown(0)) // condition crane poupée
+            {
+                if (finishDialog == false)
+                {
+                    DialogPanel.GetComponentInChildren<TextMeshProUGUI>().SetText(_dialog);
+                    finishDialog = true;
+                }
+                else
+                {
+                    GameStep++;
+                }
+            }
+            
+        }
+
+        if (GameStep == 14)
+        {
+            DialogPanel.SetActive(false);
         }
     }
 }

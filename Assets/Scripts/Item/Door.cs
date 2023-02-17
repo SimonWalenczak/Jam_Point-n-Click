@@ -35,11 +35,11 @@ public class Door : MonoBehaviour, IInteractable
     {
         isPointed = false;
     }
-    
+
     private void Update()
     {
         dist = Vector3.Distance(gameObject.transform.position, _playerController.transform.position);
-        
+
         if (dist < distDetect)
         {
             canBePicked = true;
@@ -48,8 +48,9 @@ public class Door : MonoBehaviour, IInteractable
         {
             canBePicked = false;
         }
-        
-        if (FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 || FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2)
+
+        if (FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 ||
+            FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2)
         {
             GetComponent<SpriteRenderer>().enabled = true;
         }
@@ -61,8 +62,10 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Execute()
     {
-        if ((FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 || FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2) && canBePicked == true && isPointed == true)
+        if ((FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 ||
+             FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2) && canBePicked == true && isPointed == true)
         {
+            _playerController.CanMove = false;
             PlayerPrefs.SetString(GameManager.NextSceneKey, _nextScene);
             StartCoroutine(FadeOut());
         }
@@ -77,7 +80,7 @@ public class Door : MonoBehaviour, IInteractable
         FindObjectOfType<DontDestroyOnLoad>().GameStep++;
         SceneManager.LoadScene("GameCommon");
     }
-    
+
     IEnumerator FadeIn()
     {
         _playerController.CanMove = false;

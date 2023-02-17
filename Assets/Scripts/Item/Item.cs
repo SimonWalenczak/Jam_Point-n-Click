@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Item : MonoBehaviour, IInteractable
@@ -8,7 +9,7 @@ public class Item : MonoBehaviour, IInteractable
     public Sprite ItemSprite;
     public Sprite ItemSprite2;
 
-    
+
     public int GameStep;
     public bool isItem;
 
@@ -26,6 +27,7 @@ public class Item : MonoBehaviour, IInteractable
     [SerializeField] private int typeCondition;
 
     public DontDestroyOnLoad _dontDestroyOnLoad;
+    public bool isPoupee;
 
     private void OnMouseEnter()
     {
@@ -77,13 +79,27 @@ public class Item : MonoBehaviour, IInteractable
     {
         dist = Vector3.Distance(gameObject.transform.position, _playerController.transform.position);
 
-        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
+        if (isPoupee == false)
         {
-            _spriteRenderer.enabled = true;
+            if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
+            {
+                _spriteRenderer.enabled = true;
+            }
+            else
+            {
+                _spriteRenderer.enabled = false;
+            }
         }
         else
         {
-            _spriteRenderer.enabled = false;
+            if (FindObjectOfType<DontDestroyOnLoad>().GameStep < 14 && canBePicked == true && isPointed == true)
+            {
+                _spriteRenderer.enabled = true;
+            }
+            else
+            {
+                _spriteRenderer.enabled = false;
+            }
         }
     }
 
@@ -104,22 +120,31 @@ public class Item : MonoBehaviour, IInteractable
 
     public void Execute()
     {
-        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true &&
-            ActivationCondition == true)
+        if (FindObjectOfType<DontDestroyOnLoad>().GameStep <= 13)
         {
-            _dontDestroyOnLoad.ResetBoolAction();
-            Destroy(GameManager.Instance.CanvasInventory.selectedItem);
-            
-            if (isItem == true)
+            if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true &&
+                isPointed == true &&
+                ActivationCondition == true)
             {
-                GameManager.Instance.AddItem(this, ItemSprite, ItemSprite2, type);
-                DisplayItemMark();
-                Destroy(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-                FindObjectOfType<DontDestroyOnLoad>().GameStep++;
+                _dontDestroyOnLoad.ResetBoolAction();
+                Destroy(GameManager.Instance.CanvasInventory.selectedItem);
+
+                if (isItem == true)
+                {
+                    GameManager.Instance.AddItem(this, ItemSprite, ItemSprite2, type);
+                    DisplayItemMark();
+                    Destroy(gameObject);
+                }
+                else if (isPoupee == true)
+                {
+                    FindObjectOfType<DontDestroyOnLoad>().giftSkull = true;
+
+                }
+                else
+                {
+                    Destroy(gameObject);
+                    FindObjectOfType<DontDestroyOnLoad>().GameStep++;
+                }
             }
         }
     }
