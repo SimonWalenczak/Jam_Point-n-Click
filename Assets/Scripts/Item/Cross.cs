@@ -17,6 +17,7 @@ public class Cross : MonoBehaviour
             GameManager.Instance.ResetPosItemMark();
             itemMarkPanel.SetActive(false);
             _playerController.CanMove = true;
+            FindObjectOfType<DontDestroyOnLoad>().GameStep++;
         }
     }
 }

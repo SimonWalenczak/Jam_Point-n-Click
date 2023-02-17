@@ -73,7 +73,6 @@ public class Item : MonoBehaviour, IInteractable
             {
                 GameManager.Instance.AddItem(this);
                 DisplayItemMark();
-                FindObjectOfType<DontDestroyOnLoad>().GameStep++;
                 Destroy(gameObject);
             }
             else
