@@ -22,13 +22,11 @@ public class Item : MonoBehaviour, IInteractable
 
     private void OnMouseEnter()
     {
-        print("mouse enter");
         isPointed = true;
     }
 
     private void OnMouseExit()
     {
-        print("mouse exit");
         isPointed = false;
     }
 

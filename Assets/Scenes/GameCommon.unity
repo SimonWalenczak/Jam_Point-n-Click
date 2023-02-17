@@ -780,7 +780,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1194201075, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3239851455846034160, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
       propertyPath: m_Name
@@ -1023,6 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Player>k__BackingField: {fileID: 1464829335}
+  spawns: {x: 0, y: 0, z: 0}
   <CanvasInventory>k__BackingField: {fileID: 1770870256}
   cursorTexture: {fileID: 2800000, guid: 79bbaef52390fbc4193aa1905fec769c, type: 3}
   itemMarkPanel: {fileID: 2146135959}
@@ -1101,11 +1102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8303840806564907731, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.37
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8303840806564907731, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 8303840806564907731, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: m_LocalPosition.z

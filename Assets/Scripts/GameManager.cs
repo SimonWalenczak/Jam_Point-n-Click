@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [field: SerializeField] public PlayerController Player { get; private set; }
+
+    public Vector3 spawns;
     [field: SerializeField] public CanvasInventory CanvasInventory { get; private set; }
 
     public const string NextSceneKey = "NextScene";
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject itemMark;
     public SpriteRenderer ItemSpriteRenderer;
     private Vector3 resetPosItemMark;
-    
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,17 +28,15 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("WTF");
         }
-        
+
         resetPosItemMark = itemMark.transform.localEulerAngles;
-        print("MarkPosSaved");
     }
 
     public void ResetPosItemMark()
     {
         itemMark.transform.localEulerAngles = resetPosItemMark;
-        print("MarkPosSet");
     }
-    
+
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
