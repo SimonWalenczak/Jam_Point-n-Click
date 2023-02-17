@@ -723,6 +723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0c1f4f08a14cd45bda124467c4cf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dontDestroyOnLoad: {fileID: 0}
+  AudioClips:
+  - {fileID: 8300000, guid: 997e805ee3ad3cc4f9e769c86fe0759a, type: 3}
+  - {fileID: 8300000, guid: 3915cb777df84304a8e8d9ef269d5201, type: 3}
 --- !u!82 &1397448836
 AudioSource:
   m_ObjectHideFlags: 0
@@ -737,7 +741,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

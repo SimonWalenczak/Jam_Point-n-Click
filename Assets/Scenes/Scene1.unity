@@ -360,6 +360,7 @@ MonoBehaviour:
   type: 0
   typeCondition: 0
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!1 &333029948
 GameObject:
@@ -472,6 +473,7 @@ MonoBehaviour:
   type: 0
   typeCondition: 3
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!60 &333029952
 PolygonCollider2D:
@@ -761,6 +763,7 @@ MonoBehaviour:
   type: 1
   typeCondition: 0
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!60 &461116926
 PolygonCollider2D:
@@ -991,6 +994,7 @@ MonoBehaviour:
   type: 0
   typeCondition: 4
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!60 &672171823
 PolygonCollider2D:
@@ -1430,6 +1434,7 @@ MonoBehaviour:
   type: 2
   typeCondition: 0
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!212 &911993141
 SpriteRenderer:
@@ -1588,6 +1593,7 @@ MonoBehaviour:
   type: 4
   typeCondition: 0
   _dontDestroyOnLoad: {fileID: 0}
+  isPoupee: 0
   ActivationCondition: 0
 --- !u!212 &947584752
 SpriteRenderer:
@@ -1818,6 +1824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0c1f4f08a14cd45bda124467c4cf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dontDestroyOnLoad: {fileID: 0}
+  AudioClips:
+  - {fileID: 8300000, guid: 997e805ee3ad3cc4f9e769c86fe0759a, type: 3}
+  - {fileID: 8300000, guid: 3915cb777df84304a8e8d9ef269d5201, type: 3}
 --- !u!82 &1397448836
 AudioSource:
   m_ObjectHideFlags: 0
