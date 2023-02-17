@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdc21b8706d7664a811c45bb7aab0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameStep: 0
+  GameStep: 11
   _backgroundSpriteRenderer: {fileID: 174244944}
   <BackgroundSprite>k__BackingField:
   - {fileID: 21300000, guid: 33b7cacd121ce304c888679b96aacf69, type: 3}
@@ -528,6 +528,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bde22e77594cc654d85897eb696a01ad, type: 3}
   - {fileID: 21300000, guid: 33d7fbd96131db74db22fb1074181bd0, type: 3}
   - {fileID: 21300000, guid: c40719557eca5df43a5e9252e3a0d184, type: 3}
+  haveShovel: 0
+  haveEye: 0
+  haveBattery: 0
+  haveSkull: 0
 --- !u!1 &734135760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3239851456006885749, guid: e61bf27235fb5f746a853d258e41f004, type: 3}
@@ -1014,6 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabItem: {fileID: 102235254421204489, guid: cd93825782adecf4d84518bc222cc4b2, type: 3}
   _panel: {fileID: 318723388}
+  selectedItem: {fileID: 0}
 --- !u!114 &1770870257
 MonoBehaviour:
   m_ObjectHideFlags: 0

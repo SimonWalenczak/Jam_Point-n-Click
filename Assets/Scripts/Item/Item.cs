@@ -6,7 +6,9 @@ public class Item : MonoBehaviour, IInteractable
 
     public Sprite ItemspriteMark;
     public Sprite ItemSprite;
+    public Sprite ItemSprite2;
 
+    
     public int GameStep;
     public bool isItem;
 
@@ -106,7 +108,7 @@ public class Item : MonoBehaviour, IInteractable
             
             if (isItem == true)
             {
-                GameManager.Instance.AddItem(this, ItemSprite, type);
+                GameManager.Instance.AddItem(this, ItemSprite, ItemSprite2, type);
                 DisplayItemMark();
                 Destroy(gameObject);
             }

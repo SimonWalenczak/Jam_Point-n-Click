@@ -172,6 +172,7 @@ MonoBehaviour:
   <Name>k__BackingField: Batterie
   ItemspriteMark: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
   ItemSprite: {fileID: 21300000, guid: 95fd693204f60b64ca68dafc5eabaafc, type: 3}
+  ItemSprite2: {fileID: 0}
   GameStep: 5
   isItem: 1
   distDetect: 0.7
@@ -410,7 +411,7 @@ GameObject:
   - component: {fileID: 172006541}
   - component: {fileID: 172006544}
   - component: {fileID: 172006542}
-  - component: {fileID: 172006545}
+  - component: {fileID: 172006546}
   m_Layer: 0
   m_Name: porte cimetiere
   m_TagString: Untagged
@@ -522,7 +523,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &172006545
+--- !u!114 &172006546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,22 +532,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 172006540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b062e7d0753ecab4895f4f0da29f4666, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a02dff84893d6749bdc84ec773988af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: PorteScene3
-  ItemspriteMark: {fileID: 0}
-  ItemSprite: {fileID: 0}
-  GameStep: 11
-  isItem: 0
-  distDetect: 2
-  _playerController: {fileID: 0}
+  _nextScene: Scene3
+  GameStep1: 11
+  GameStep2: 20
   isPointed: 0
   canBePicked: 0
-  type: 0
-  typeCondition: 0
-  _dontDestroyOnLoad: {fileID: 0}
-  ActivationCondition: 0
+  _playerController: {fileID: 0}
+  distDetect: 2
+  FaderIn: {fileID: 55316087}
+  FaderOut: {fileID: 314089363}
 --- !u!1 &314089363
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +853,7 @@ MonoBehaviour:
   <Name>k__BackingField: Tombe
   ItemspriteMark: {fileID: 0}
   ItemSprite: {fileID: 0}
+  ItemSprite2: {fileID: 0}
   GameStep: 4
   isItem: 0
   distDetect: 0.8

@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
-        SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene1"), LoadSceneMode.Additive);
+        SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene2"), LoadSceneMode.Additive);
         PlayerPrefs.DeleteKey(NextSceneKey);
     }
     
@@ -66,8 +66,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item, Sprite sprite, int type)
+    public void AddItem(Item item, Sprite sprite, Sprite sprite2, int type)
     {
-        CanvasInventory.AddItem(item, sprite, type);
+        CanvasInventory.AddItem(item, sprite, sprite2, type);
     }
 }

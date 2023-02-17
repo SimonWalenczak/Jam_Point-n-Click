@@ -350,6 +350,7 @@ MonoBehaviour:
   <Name>k__BackingField: Cadavre
   ItemspriteMark: {fileID: 0}
   ItemSprite: {fileID: 0}
+  ItemSprite2: {fileID: 0}
   GameStep: 1
   isItem: 0
   distDetect: 0.5
@@ -596,6 +597,7 @@ MonoBehaviour:
   <Name>k__BackingField: Voiture
   ItemspriteMark: {fileID: 0}
   ItemSprite: {fileID: 0}
+  ItemSprite2: {fileID: 0}
   GameStep: 7
   isItem: 0
   distDetect: 0.75
@@ -782,6 +784,7 @@ MonoBehaviour:
   <Name>k__BackingField: Pelle
   ItemspriteMark: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
   ItemSprite: {fileID: 21300000, guid: e11630651cc59cc4894e002fd67bd17c, type: 3}
+  ItemSprite2: {fileID: 0}
   GameStep: 0
   isItem: 1
   distDetect: 0.75
@@ -1011,6 +1014,7 @@ MonoBehaviour:
   <Name>k__BackingField: "Cr\xE2neSansOeil"
   ItemspriteMark: {fileID: 0}
   ItemSprite: {fileID: 0}
+  ItemSprite2: {fileID: 0}
   GameStep: 8
   isItem: 0
   distDetect: 1.3
@@ -1449,6 +1453,7 @@ MonoBehaviour:
   <Name>k__BackingField: Oeil
   ItemspriteMark: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
   ItemSprite: {fileID: 21300000, guid: ac26fd79a9b91aa4580c6548ab7a8f7b, type: 3}
+  ItemSprite2: {fileID: 0}
   GameStep: 2
   isItem: 1
   distDetect: 0.7
@@ -1567,8 +1572,8 @@ GameObject:
   m_Component:
   - component: {fileID: 947584750}
   - component: {fileID: 947584752}
-  - component: {fileID: 947584751}
   - component: {fileID: 947584753}
+  - component: {fileID: 947584751}
   m_Layer: 0
   m_Name: Crane avec oeil et papier
   m_TagString: Untagged
@@ -1606,6 +1611,7 @@ MonoBehaviour:
   <Name>k__BackingField: "Cr\xE2ne"
   ItemspriteMark: {fileID: 21300000, guid: b1a7884ac345aec4b93e3241279ce50e, type: 3}
   ItemSprite: {fileID: 21300000, guid: 828539d288a7370488ec2186b2eaa401, type: 3}
+  ItemSprite2: {fileID: 21300000, guid: 192b91bd699cbba4cb008439144a15d6, type: 3}
   GameStep: 9
   isItem: 1
   distDetect: 1.3
