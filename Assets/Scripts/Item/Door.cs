@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,9 +16,14 @@ public class Door : MonoBehaviour, IInteractable
     public PlayerController _playerController;
     [SerializeField] private float distDetect;
 
+    [SerializeField] private GameObject FaderIn;
+    [SerializeField] private GameObject FaderOut;
+
     private void Awake()
     {
         _playerController = FindObjectOfType<PlayerController>();
+        FaderIn.SetActive(true);
+        StartCoroutine(FadeIn());
     }
 
     private void OnMouseEnter()
@@ -57,8 +64,25 @@ public class Door : MonoBehaviour, IInteractable
         if ((FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 || FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2) && canBePicked == true && isPointed == true)
         {
             PlayerPrefs.SetString(GameManager.NextSceneKey, _nextScene);
-            FindObjectOfType<DontDestroyOnLoad>().GameStep++;
-            SceneManager.LoadScene("GameCommon");
+            StartCoroutine(FadeOut());
         }
+    }
+
+    IEnumerator FadeOut()
+    {
+        FaderOut.SetActive(true);
+        _playerController.CanMove = false;
+        yield return new WaitForSeconds(1.8f);
+        _playerController.CanMove = true;
+        FindObjectOfType<DontDestroyOnLoad>().GameStep++;
+        SceneManager.LoadScene("GameCommon");
+    }
+    
+    IEnumerator FadeIn()
+    {
+        _playerController.CanMove = false;
+        yield return new WaitForSeconds(3);
+        FaderIn.SetActive(false);
+        _playerController.CanMove = true;
     }
 }

@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         resetPosItemMark = itemMark.transform.localEulerAngles;
     }
-
+    
     public void ResetPosItemMark()
     {
         itemMark.transform.localEulerAngles = resetPosItemMark;
@@ -43,7 +46,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(PlayerPrefs.GetString(NextSceneKey, "Scene1"), LoadSceneMode.Additive);
         PlayerPrefs.DeleteKey(NextSceneKey);
     }
-
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
