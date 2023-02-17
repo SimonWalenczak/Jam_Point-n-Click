@@ -3,10 +3,10 @@ using UnityEngine;
 public class Item : MonoBehaviour, IInteractable
 {
     [field: SerializeField] public string Name { get; private set; }
-    
+
     public Sprite ItemspriteMark;
     public Sprite ItemSprite;
-    
+
     public int GameStep;
     public bool isItem;
 
@@ -21,6 +21,10 @@ public class Item : MonoBehaviour, IInteractable
     [SerializeField] private bool canBePicked;
 
     [SerializeField] private int type;
+    [SerializeField] private int typeCondition;
+
+    public DontDestroyOnLoad _dontDestroyOnLoad;
+
     private void OnMouseEnter()
     {
         isPointed = true;
@@ -36,23 +40,47 @@ public class Item : MonoBehaviour, IInteractable
         _playerController = FindObjectOfType<PlayerController>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _polygonCollider2D = GetComponent<PolygonCollider2D>();
+        _dontDestroyOnLoad = FindObjectOfType<DontDestroyOnLoad>();
+    }
+
+    public bool ActivationCondition;
+
+    private void Condition()
+    {
+        switch (typeCondition)
+        {
+            case 2:
+                if (_dontDestroyOnLoad.haveShovel)
+                    ActivationCondition = true;
+                break;
+            case 3:
+                if (_dontDestroyOnLoad.haveBattery)
+                    ActivationCondition = true;
+                break;
+            case 4:
+                if (_dontDestroyOnLoad.haveEye)
+                    ActivationCondition = true;
+                break;
+            case 0:
+                ActivationCondition = true;
+                break;
+        }
     }
 
     public void CalculateDistance()
     {
         dist = Vector3.Distance(gameObject.transform.position, _playerController.transform.position);
-        
+
         if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
         {
             _spriteRenderer.enabled = true;
-            // _polygonCollider2D.enabled = true;
         }
         else
         {
             _spriteRenderer.enabled = false;
-            // _polygonCollider2D.enabled = false;
         }
     }
+
     private void Update()
     {
         if (dist < distDetect)
@@ -63,13 +91,19 @@ public class Item : MonoBehaviour, IInteractable
         {
             canBePicked = false;
         }
+
         CalculateDistance();
+        Condition();
     }
-    
+
     public void Execute()
     {
-        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
+        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true &&
+            ActivationCondition == true)
         {
+            _dontDestroyOnLoad.ResetBoolAction();
+            Destroy(GameManager.Instance.CanvasInventory.selectedItem);
+            
             if (isItem == true)
             {
                 GameManager.Instance.AddItem(this, ItemSprite, type);

@@ -357,6 +357,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 0
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!1 &319968923
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +603,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 0
+  typeCondition: 3
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!60 &333029952
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -783,6 +789,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 1
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!60 &461116926
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1009,6 +1018,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 0
+  typeCondition: 4
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!60 &672171823
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1444,6 +1456,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 2
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!212 &911993141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1598,6 +1613,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 4
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!212 &947584752
 SpriteRenderer:
   m_ObjectHideFlags: 0

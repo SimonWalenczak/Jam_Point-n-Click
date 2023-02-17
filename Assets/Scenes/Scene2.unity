@@ -179,6 +179,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 3
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!60 &29931668
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -541,6 +544,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 0
+  typeCondition: 0
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!1 &314089363
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +863,9 @@ MonoBehaviour:
   isPointed: 0
   canBePicked: 0
   type: 0
+  typeCondition: 2
+  _dontDestroyOnLoad: {fileID: 0}
+  ActivationCondition: 0
 --- !u!212 &385241694
 SpriteRenderer:
   m_ObjectHideFlags: 0

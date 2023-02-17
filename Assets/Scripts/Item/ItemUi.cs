@@ -17,6 +17,8 @@ public class ItemUi : MonoBehaviour
 
     public void Activation()
     {
+        _dontDestroyOnLoad.ResetBoolAction();
+        
         switch (type)
         {
             case 1:
@@ -32,5 +34,6 @@ public class ItemUi : MonoBehaviour
                 _dontDestroyOnLoad.haveSkull = true;
                 break;
         }
+        GameManager.Instance.CanvasInventory.selectedItem = this.gameObject;
     }
 }

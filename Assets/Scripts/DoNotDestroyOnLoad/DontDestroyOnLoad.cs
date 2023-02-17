@@ -18,6 +18,14 @@ public class DontDestroyOnLoad : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void ResetBoolAction()
+    {
+        haveShovel = false;
+        haveEye = false;
+        haveBattery = false;
+        haveSkull = false;
+    }
+    
     private void Update()
     {
         _backgroundSpriteRenderer.sprite = BackgroundSprite[GameStep];
