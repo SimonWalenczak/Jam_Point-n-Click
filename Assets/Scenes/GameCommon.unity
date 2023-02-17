@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdc21b8706d7664a811c45bb7aab0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameStep: 11
+  GameStep: 9
   _backgroundSpriteRenderer: {fileID: 174244944}
   <BackgroundSprite>k__BackingField:
   - {fileID: 21300000, guid: 33b7cacd121ce304c888679b96aacf69, type: 3}
@@ -1144,7 +1144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8303840806564907731, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.82
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 8303840806564907731, guid: b352dbf3c5a223048b4ce9ac0ee9e986, type: 3}
       propertyPath: m_LocalPosition.z
