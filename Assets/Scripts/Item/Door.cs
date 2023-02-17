@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _nextScene;
-    public int GameStep;
+    public int GameStep1;
+    public int GameStep2;
 
     private float dist;
     [SerializeField] private bool isPointed;
@@ -41,7 +42,7 @@ public class Door : MonoBehaviour, IInteractable
             canBePicked = false;
         }
         
-        if (FindObjectOfType<DontDestroyOnLoad>().GameStep >= GameStep)
+        if (FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 || FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2)
         {
             GetComponent<SpriteRenderer>().enabled = true;
         }
@@ -53,7 +54,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Execute()
     {
-        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
+        if ((FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep1 || FindObjectOfType<DontDestroyOnLoad>().GameStep == GameStep2) && canBePicked == true && isPointed == true)
         {
             PlayerPrefs.SetString(GameManager.NextSceneKey, _nextScene);
             FindObjectOfType<DontDestroyOnLoad>().GameStep++;
