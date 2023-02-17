@@ -178,6 +178,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 3
 --- !u!60 &29931668
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -539,6 +540,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 0
 --- !u!1 &314089363
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +856,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 0
 --- !u!212 &385241694
 SpriteRenderer:
   m_ObjectHideFlags: 0

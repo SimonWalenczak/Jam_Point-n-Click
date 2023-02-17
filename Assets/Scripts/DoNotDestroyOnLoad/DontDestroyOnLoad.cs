@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +7,11 @@ public class DontDestroyOnLoad : MonoBehaviour
     [SerializeField] private SpriteRenderer _backgroundSpriteRenderer;
 
     [field: SerializeField] public List<Sprite> BackgroundSprite { get; private set; }
+    
+    public bool haveShovel;
+    public bool haveEye;
+    public bool haveBattery;
+    public bool haveSkull;
     
     private void Awake()
     {

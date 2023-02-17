@@ -356,6 +356,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 0
 --- !u!1 &319968923
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +599,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 0
 --- !u!60 &333029952
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -780,6 +782,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 1
 --- !u!60 &461116926
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1005,6 +1008,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 0
 --- !u!60 &672171823
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1439,6 +1443,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 2
 --- !u!212 &911993141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1592,6 +1597,7 @@ MonoBehaviour:
   _playerController: {fileID: 0}
   isPointed: 0
   canBePicked: 0
+  type: 4
 --- !u!212 &947584752
 SpriteRenderer:
   m_ObjectHideFlags: 0

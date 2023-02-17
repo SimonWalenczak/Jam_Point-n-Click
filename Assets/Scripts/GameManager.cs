@@ -66,8 +66,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item, Sprite sprite)
+    public void AddItem(Item item, Sprite sprite, int type)
     {
-        CanvasInventory.AddItem(item, sprite);
+        CanvasInventory.AddItem(item, sprite, type);
     }
 }

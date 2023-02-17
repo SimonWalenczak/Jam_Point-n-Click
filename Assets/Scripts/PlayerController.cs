@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
 
     public float _currentX;
     public float _previousX;
-
+    
+    
     private void Start()
     {
         var agent = GetComponent<NavMeshAgent>();

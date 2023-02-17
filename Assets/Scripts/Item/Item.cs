@@ -20,7 +20,7 @@ public class Item : MonoBehaviour, IInteractable
     [SerializeField] private bool isPointed;
     [SerializeField] private bool canBePicked;
 
-
+    [SerializeField] private int type;
     private void OnMouseEnter()
     {
         isPointed = true;
@@ -72,7 +72,7 @@ public class Item : MonoBehaviour, IInteractable
         {
             if (isItem == true)
             {
-                GameManager.Instance.AddItem(this, ItemSprite);
+                GameManager.Instance.AddItem(this, ItemSprite, type);
                 DisplayItemMark();
                 Destroy(gameObject);
             }
